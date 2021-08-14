@@ -1,23 +1,22 @@
 <script lang="ts">
 	import logo from "./assets/svelte.png";
-	import Counter from "./lib/Counter.svelte";
+	import Editor from "./lib/Editor.svelte";
 </script>
 
 <main>
 	<!-- <img src={logo} alt="Svelte Logo" /> -->
 	<header>
 		<h1>EdIt</h1>
-		<p>By 501A</p>
+		<h2>Blazing quick image edits ⚡</h2>
 	</header>
-
-	<Counter />
-	<p>
-		Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-		the officially supported framework, also powered by Vite!
-	</p>
+	<Editor />
+	<footer>
+		<p>Design And Developed By 501A</p>
+	</footer>
 </main>
 
 <style>
+	@import "./styles.css";
 	:root {
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
 			Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -26,16 +25,19 @@
 		margin: 0 10%;
 	}
 
-	header {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		justify-content: center;
-		border: 10px solid black;
-	}
 	header h1 {
 		font-weight: bold;
 		margin-bottom: 0;
 		font-size: 4rem;
+	}
+	header h2 {
+		color: var(--editGrey);
+		font-style: italic;
+		margin-top: 0;
+	}
+	footer {
+		position: sticky;
+
+		bottom: 1em;
 	}
 </style>
